@@ -1,13 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Lab 1 - Selin Yazici Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selin Yazıcı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #131015;
+    --paper: #ece6d6;
+    --red: #e11b23;
+    --blueprint: #7f9fb8;
+    --line: rgba(236,230,214,0.2);
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .display{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    line-height: 0.95;
+  }
+  .mono{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--blueprint);
+    letter-spacing: 0.02em;
+  }
+  ::selection{ background: var(--red); color: var(--paper); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  .sheet{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 70px 24px 60px 24px;
+  }
+
+  .eyebrow{ display:block; margin-bottom: 20px; }
+
+  h1{
+    font-size: clamp(48px, 11vw, 96px);
+    margin: 0 0 26px 0;
+  }
+
+  .intro{
+    max-width: 46ch;
+    opacity: 0.9;
+    margin-bottom: 50px;
+  }
+
+  .facts{
+    display: grid;
+    gap: 0;
+  }
+  .fact{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .facts .fact:last-child{ border-bottom: 1px solid var(--line); }
+  .fact .val{ font-size: 17px; }
+  .fact .val b{
+    color: var(--paper);
+    font-weight: 600;
+  }
+
+  .curl-mark{
+    margin: 56px 0 50px 0;
+  }
+  .curl-mark svg{ width: 100%; max-width: 340px; height: auto; display:block; }
+
+  footer{
+    margin-top: 60px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+</style>
 </head>
 <body>
-    <h1>About Selin Yazici</h1>
-    <p>Hi, my name is Selin Yazici, and I am an architect.</p>
-    <p>I specialize in architectural design, focusing on creating spaces that are both highly functional and aesthetically inspiring.</p>
-    <p>Welcome to my first website, which will serve as a foundation for my future design portfolio and projects.</p>
+<div class="sheet">
+
+  <span class="mono eyebrow">NOT — SELİN YAZICI HAKKINDA</span>
+  <h1 class="display">SELİN<br>YAZICI</h1>
+
+  <p class="intro">Mimar. Koç burcu. Bir ortama girdiği an fark edilir — başka bir şey söylemeye gerek yok.</p>
+
+  <div class="curl-mark">
+    <svg viewBox="0 0 340 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kıvırcık bukle çizgisi">
+      <g stroke="#e11b23" stroke-width="2.2" fill="none" stroke-linecap="round">
+        <path d="M10,70 C10,30 60,30 60,55 C60,72 40,72 40,58"/>
+        <path d="M90,75 C90,20 160,20 160,50 C160,75 120,75 120,55 C120,42 140,42 140,52"/>
+        <path d="M200,72 C200,32 250,32 250,58 C250,75 228,75 228,60"/>
+        <path d="M280,68 C280,38 320,38 320,58"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="facts">
+    <div class="fact">
+      <span class="mono">MESLEK</span>
+      <span class="val"><b>Mimar</b></span>
+    </div>
+    <div class="fact">
+      <span class="mono">BURÇ</span>
+      <span class="val"><b>Koç</b> — element ateş, gezegen Mars</span>
+    </div>
+    <div class="fact">
+      <span class="mono">SAÇ</span>
+      <span class="val">Doğal kıvırcık, <b>Pantene Belirgin Bukleler</b> ile bakımlı</span>
+    </div>
+    <div class="fact">
+      <span class="mono">MÜZİK</span>
+      <span class="val">Kendrick Lamar dinliyor</span>
+    </div>
+    <div class="fact">
+      <span class="mono">ETKİ</span>
+      <span class="val">Bir odaya girdiğinde hemen fark edilir</span>
+    </div>
+  </div>
+
+  <footer class="mono">buraya kendi notunu yazabilirsin</footer>
+
+</div>
 </body>
 </html>
